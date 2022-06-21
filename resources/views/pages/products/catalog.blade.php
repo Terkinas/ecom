@@ -153,8 +153,8 @@
                 <!-- COMPONENT: PRODUCT ITEM -->
                 <article class="border border-gray-200 overflow-hidden bg-white shadow-sm rounded mb-5">
                     <div class="flex flex-col md:flex-row">
-                        <a href="#" class="md:w-1/4">
-                            <img class="mx-auto object-contain h-full w-full" src="https://www.kindpng.com/picc/m/595-5956067_nike-air-force-1-07-lv8-4-white.png" alt="Product name text">
+                        <a href="#" class="md:w-1/4 p-8 sm:p-4">
+                            <img class="mx-auto object-contain h-full w-full" src="{{ $product->image_path }}" alt="Product name text">
                         </a> <!-- col.// -->
                         <div class="md:w-2/4">
                             <div class="p-4">
@@ -180,8 +180,8 @@
                         <div class="md:w-1/4 border-t lg:border-t-0 lg:border-l border-gray-200">
                             <div class="p-5">
                                 <p>
-                                    <span class="text-xl font-semibold text-black">$120.50</span>
-                                    <del class="line-through text-sm text-gray-400"> $230.00</del>
+                                    <span class="text-xl font-semibold text-black">${{  round($product->price / 100 * 0.79, 2) }}</span>
+                                    <del class="line-through text-sm text-gray-400"> $ {{  round($product->price / 100 * 1.1, 2) }} </del>
                                 </p>
                                 <p class="text-green-500 text-xs">Nemokamas pristatymas</p>
                                 <div class="my-3 mb-2">

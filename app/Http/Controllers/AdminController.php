@@ -45,11 +45,12 @@ class AdminController extends Controller
 
             'added_by',
 
-            'image' => 'required|mimes:jpg,png,jpeg',
+            // 'image' => 'required|mimes:jpg,png,jpeg',
+            'imageURL' => 'required'
         ]);
 
-        $newImageName = time() . '-' . $request->name . '-' . $request->category .
-            $request->image->extension();
+        // $newImageName = time() . '-' . $request->name . '-' . $request->category .
+        //     $request->image->extension();
 
         Product::create([
             'name' => request('name'),
@@ -76,12 +77,13 @@ class AdminController extends Controller
 
             'onsale' => 0,
 
-            'image_path' => $newImageName,
-
+            // 'image_path' => $newImageName,
+            'image_path' => request('imageURL'),
+            
 
         ]);
 
-        $request->image->move(public_path('images/products'), $newImageName);
+        // $request->image->move(public_path('images/products'), $newImageName);
 
         return redirect()->route('products.show');
     }

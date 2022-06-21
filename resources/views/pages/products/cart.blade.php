@@ -29,8 +29,8 @@
                         <div class="w-full lg:w-2/5 xl:w-2/4">
                             <figure class="flex leading-5">
                                 <div>
-                                    <div class="block w-16 h-16 rounded border border-gray-200 overflow-hidden">
-                                        <img src="images/items/1.jpg" alt="Title">
+                                    <div class="block w-16 h-16 rounded border border-gray-200 overflow-hidden p-1">
+                                        <img class="object-contain h-full w-full" src="{{ $product['item']['image_path'] }}" alt="Title">
                                     </div>
                                 </div>
                                 <figcaption class="ml-3">

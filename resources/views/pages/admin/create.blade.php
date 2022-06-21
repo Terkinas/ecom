@@ -146,9 +146,14 @@
                         </div> 
                     </div> -->
 
-                    <div class="mb-4">
+                    <!-- <div class="mb-4">
                         <label class="block mb-1"> Image upload </label>
                         <input name="image" type="file" class="w-72" placeholder="Type here" />
+                    </div> -->
+
+                    <div class="mb-4">
+                        <label class="block mb-1">  Image URL </label>
+                        <input name="imageURL" type="text" class="appearance-none border border-gray-200 bg-gray-100 rounded-md py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400 w-full" placeholder="https:://" />
                     </div>
 
                     <label class="flex items-center w-max my-4">
